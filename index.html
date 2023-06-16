@@ -27,12 +27,15 @@
 <body>
     <!-- Root -->
     <div id="root">
-        <div class="container">
+        <div class="container text-center">
             <div class="card my-5">
                 <img :src="image" class="img-fluid" :alt="alt">
                 <div class="card-body">
                     <h5 class="card-title">{{title}}</h5>
-                    <p class="card-text">{{text}}</p>
+                    <p :class="classColor" class="card-text">{{text}}</p>
+                </div>
+                <div class="py-3">
+                    <button v-on:click="toggleClassColor" class="btn btn-primary">Cliccami!</button>
                 </div>
             </div>
         </div>
